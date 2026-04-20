@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passed or Failed</title>
+</head>
+
+<body>
+    <script>
+        /* Passed / Failed */
+
+        const students = [
+            { name: "Ali", score: 85 },
+            { name: "Vali", score: 45 },
+            { name: "Sami", score: 70 },
+            { name: "Lola", score: 30 }
+        ];
+
+        let newArr = [];
+
+        /* 60+ Passed */
+        /* Below 60 Failed */
+
+        function checkStudents(arr, newArr) {
+            for (let i = 0; i < arr.length; i++) {
+                const student = arr[i];
+
+                if (student.score >= 60) {
+                    console.log(student.name + ": Passed");
+                } else {
+                    console.log(student.name + ": Failed");
+                }
+
+                newArr.push(student);
+            }
+        }
+
+        checkStudents(students, newArr);
+    </script>
+</body>
+
+</html>
