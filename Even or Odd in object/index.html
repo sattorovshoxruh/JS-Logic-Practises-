@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even / Odd in object</title>
+</head>
+
+<body>
+    <script>
+        /* Even / odd */
+
+        const numbers = [12, 5, 8, 130, 44];
+
+        function analyzeNumbers(analyze) {
+
+            let obj = {
+                even: [], odd: []
+            }
+
+            for (let i = 0; i < analyze.length; i++) {
+                const element = analyze[i];
+
+                if (element % 2 === 0) {
+                    obj.even.push(element)
+
+                }
+                else {
+                    obj.odd.push(element)
+                }
+
+            }
+
+            return obj;
+        }
+
+        analyzeNumbers(numbers)
+
+        let result = analyzeNumbers(numbers);
+        console.log(result);
+    </script>
+</body>
+
+</html>
