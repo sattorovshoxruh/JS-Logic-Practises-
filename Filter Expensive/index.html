@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Expensive Products</title>
+</head>
+
+<body>
+    <script>
+        /* Filter Expensive Products */
+
+        const products = [
+            { name: "Phone", price: 500 },
+            { name: "Laptop", price: 1200 },
+            { name: "Mouse", price: 25 }
+        ];
+
+        function filterExpensive(items) {
+            let newArr = [];
+
+            for (let i = 0; i < items.length; i++) {
+                const element = items[i];
+
+                if (element.price > 100) {
+                    newArr.push(element);
+                }
+            }
+
+            return newArr;
+        }
+
+        let result = filterExpensive(products);
+        console.log(result);
+    </script>
+</body>
+
+</html>
