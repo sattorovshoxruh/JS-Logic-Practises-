@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number</title>
+</head>
+<body>
+
+    <div class="random-number">0</div>
+
+    <script>
+
+        const choose = Number(prompt("Choose a maximum number:"));
+
+        // Generate random number from 1 to chosen number
+        let randomNumber = Math.trunc(Math.random() * choose) + 1;
+
+        const showRandomNumber = (number) => {
+
+            let chosenNumber = document.querySelector(".random-number");
+
+            chosenNumber.textContent = number;
+        };
+
+        showRandomNumber(randomNumber);
+
+    </script>
+
+</body>
+</html>
