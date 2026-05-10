@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average Rating</title>
+</head>
+<body>
+
+<script>
+
+    /* Average Rating */
+
+    const students = [
+        { name: "Ali", scores: [80, 70, 90] },
+        { name: "Vali", scores: [40, 60, 50] },
+        { name: "Sami", scores: [100, 90, 95] },
+        { name: "Lola", scores: [30, 40, 35] }
+    ];
+
+    function rateStudents(studentList) {
+
+        let result = {
+            Excellent: [],
+            Average: [],
+            Poor: []
+        };
+
+        for (let i = 0; i < studentList.length; i++) {
+
+            const student = studentList[i];
+            const scores = student.scores;
+
+            let sum = 0;
+
+            // Calculate total score
+            for (let j = 0; j < scores.length; j++) {
+                sum += scores[j];
+            }
+
+            // Calculate average score
+            let average = sum / scores.length;
+
+            // Categorize students
+            if (average >= 80) {
+                result.Excellent.push(student.name);
+            }
+
+            else if (average >= 50) {
+                result.Average.push(student.name);
+            }
+
+            else {
+                result.Poor.push(student.name);
+            }
+        }
+
+        return result;
+    }
+
+    console.log(rateStudents(students));
+
+</script>
+
+</body>
+</html>
