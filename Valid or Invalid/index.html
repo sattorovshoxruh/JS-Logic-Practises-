@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valid / Invalid Users</title>
+</head>
+<body>
+
+<script>
+
+    /* Valid / Invalid Users */
+
+    const users = [
+        { name: "Ali", age: 20, isActive: true },
+        { name: "Vali", age: 17, isActive: false },
+        { name: "Sami", age: 25, isActive: false },
+        { name: "Lola", age: 16, isActive: true },
+        { name: "Ali", age: 20, isActive: true },
+        { name: "Vali", age: 17, isActive: false },
+        { name: "Sami", age: 25, isActive: false },
+        { name: "Lola", age: 16, isActive: true }
+    ];
+
+    function analyzeUsers(userList) {
+
+        let result = {
+            validUsers: [],
+            invalidUsers: [],
+            validCount: 0,
+            invalidCount: 0
+        };
+
+        for (let i = 0; i < userList.length; i++) {
+
+            const user = userList[i];
+
+            // Check if user is valid
+            if (user.age >= 18 && user.isActive) {
+
+                result.validUsers.push(user.name);
+                result.validCount++;
+
+            } else {
+
+                result.invalidUsers.push(user.name);
+                result.invalidCount++;
+            }
+        }
+
+        return result;
+    }
+
+    console.log(analyzeUsers(users));
+
+</script>
+
+</body>
+</html>
