@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+
+    <div class="result">0</div>
+
+    <script>
+
+        const firstValue = Number(prompt("Enter first number:"));
+        const operation = prompt("Enter operation (+, -, *, /):");
+        const secondValue = Number(prompt("Enter second number:"));
+
+        const resultBox = document.querySelector(".result");
+
+        function calculate(a, op, b) {
+
+            let result;
+
+            if (op === "+") {
+                result = a + b;
+            } 
+            else if (op === "-") {
+                result = a - b;
+            } 
+            else if (op === "*") {
+                result = a * b;
+            } 
+            else if (op === "/") {
+                result = b !== 0 ? a / b : "Cannot divide by 0";
+            } 
+            else {
+                result = "Invalid operation";
+            }
+
+            resultBox.textContent = result;
+        }
+
+        calculate(firstValue, operation, secondValue);
+
+    </script>
+
+</body>
+</html>
