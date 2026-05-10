@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Switcher</title>
+
+    <style>
+
+        /* Button */
+        .switch-btn {
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            background: linear-gradient(to left, #3e1677, #502bb4);
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        /* Box */
+        .color-box {
+            width: 270px;
+            height: 50px;
+            background-color: red;
+            border-radius: 10px;
+            border: 2px solid black;
+            transition: 0.3s;
+        }
+
+        /* Active color */
+        .active-color {
+            background-color: green;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <button class="switch-btn">
+        Click here to switch the color
+    </button>
+
+    <div class="color-box"></div>
+
+    <script>
+
+        const button = document.querySelector(".switch-btn");
+        const colorBox = document.querySelector(".color-box");
+
+        function switchColor() {
+
+            colorBox.classList.toggle("active-color");
+
+        }
+
+        button.addEventListener("click", switchColor);
+
+    </script>
+
+</body>
+
+</html>
