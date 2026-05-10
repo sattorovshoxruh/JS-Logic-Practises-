@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adult / Minor</title>
+</head>
+
+<body>
+    <script>
+        /* checkAge */
+
+        const users = [{ name: "Ali", age: 17 }, { name: "Vali", age: 22 }, { name: "Sami", age: 15 }];
+
+        function checkAge(peoples) {
+
+            let personalities = {
+                adult: [],
+                minor: []
+            };
+
+            for (let i = 0; i < peoples.length; i++) {
+                const element = peoples[i];
+
+                if (element.age >= 18) {
+                    personalities.adult.push(element.name);
+                } else {
+                    personalities.minor.push(element.name);
+                }
+            }
+
+            console.log(personalities);
+        }
+
+        checkAge(users);
+    </script>
+</body>
+
+</html>
